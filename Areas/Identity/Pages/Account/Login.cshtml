@@ -1,0 +1,83 @@
+﻿
+@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "";
+}
+<head>
+    <link rel="stylesheet" href="~/css/all.css">
+    <link rel="stylesheet" href="~/css/style1.css">
+
+
+</head>
+<body class="body1">
+
+    <div class="login-box">
+
+        <a href="~/" class="close" title="Close Modal">&times;</a>
+        @* <div class="imgcontainer" align="center">
+
+            <img src="~/images/loginavatar.jpg" alt="Avatar" class="rounded-circle" >
+                        </div>*@
+
+
+
+        <div class="login-box-body">
+
+
+            <form id="account" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Input.Email"></label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Password"></label>
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe">
+                            <input asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                </div>
+                <div class="form-group">
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </p>
+
+
+                    <button class="btn btn-success btn-block "> <a style="color:white;" href="/Identity/Account/Register">Create New Account</a></button>
+                    <div class="form-group">
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+
+            @section Scripts {
+                <partial name="_ValidationScriptsPartial" />
+
+
+                    <script>$(function () {
+                            $('input').iCheck({
+                                checkboxClass: 'icheckbox_square-blue',
+                                radioClass: 'iradio_square-blue',
+                                increaseArea: '20%' /* optional */
+                            });
+                        });</script>
+                }

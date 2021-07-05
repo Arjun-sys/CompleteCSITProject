@@ -1,0 +1,167 @@
+﻿@model IEnumerable<EasyCSIT.Models.StudentModel>
+
+@{
+    ViewData["Title"] = "Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int studentCounter = 1;
+}
+
+<head>
+    <style>
+        /* style for the css menu dropdown container */
+        .menu {
+            position: relative;
+            display: inline-block;
+            ​ z-index:2;
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            text-align: left;
+        }
+
+            /* style for the button */
+            .menu:before {
+                content: "\2630 \a0 More";
+                color: #555;
+                padding: 5px 10px;
+                border: 1px solid #555;
+                border-radius: 3px;
+                background: white;
+            }
+
+            .menu:focus {
+                pointer-events: none;
+            }
+
+                /* If :focus detected the dropdown menu is displayed by making it visible */
+                .menu:focus .menu-dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+        /* style for the dropdown box */
+        .menu-dropdown {
+            background-color: white;
+            width: auto;
+            margin: 3px 0 0 0;
+            padding: 15px;
+            border-radius: 3px;
+            border: 1px black solid;
+            border-radius: 3px;
+            pointer-events: auto;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 1s;
+            background: #f8f8ff;
+        }
+
+            /* style the links in the dropdown */
+            .menu-dropdown a {
+                background: transparent;
+                border: none;
+                outline: 0;
+                display: block;
+                color: #808080;
+                text-decoration: none;
+                width: 120px;
+                padding: 2px;
+            }
+
+                .menu-dropdown a:hover {
+                    color: black;
+                }
+    </style>
+</head>
+<body>
+
+    <p>
+        <h3><b>Student Of Fourth Semester</b></h3>
+
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    SN
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Semester)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StudentRoll)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Batch)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactNumber)
+                </th>
+                <th>
+                    Action
+                    &nbsp;&nbsp;
+                    <div tabindex="0" class="menu">
+                        <div class="menu-dropdown">
+
+                            <a asp-controller="Crud" asp-action="Create">Add Student</a>
+                            <hr />
+                            <a asp-controller="Fourth" asp-action="CreateSubject">Add Subject</a>
+                            <hr />
+                            <a asp-controller="Fourth" asp-action="Add_Markslip">Add MarkSheet</a>
+
+
+
+                        </div>
+                    </div>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @studentCounter
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Semester)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentRoll)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Batch)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ContactNumber)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Crud", new { studentId = item.StudentId }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Details", "Details", "Crud", new { studentId = item.StudentId }, new { @class = "btn btn-info" })|
+                        @Html.ActionLink("Delete", "Delete", "crud", new { studentId = item.StudentId }, new { @class = "btn btn-danger" })|
+                        @Html.ActionLink("Marks", "StudentMarks", "crud", new { studentId = item.StudentId }, new { @class = "btn btn-success" })
+                    </td>
+
+                </tr>
+                studentCounter++;
+            }
+        </tbody>
+    </table>
+
+</body>

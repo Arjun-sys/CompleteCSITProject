@@ -1,0 +1,329 @@
+﻿<html >
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css2/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts2/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="~/css/all.css">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+    <!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="~/css2/style.css">
+
+
+    <style>
+
+
+        .a_dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+            .a_dropdown .a_dropbtn {
+                font-size: 18px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .a_dropdown:hover .a_dropbtn {
+                background-color: Highlight;
+            }
+
+        .a_dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f8f8ff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .a_dropdown-content a {
+                float: none;
+                color: #808080;
+                padding: 12px 16px;
+                text-decoration: solid;
+                display: block;
+                text-align: left;
+            }
+
+                .a_dropdown-content a:hover {
+                    color: black;
+                }
+
+        .a_dropdown:hover .a_dropdown-content {
+            display: inline-block;
+        }
+    </style>
+
+    <title></title>
+</head>
+<body  style="width:100%;">
+    <header>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a  class="navbar-brand page-scroll" href="home/index"> Easy CSIT </a>
+         
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-fw fa-home"></i>Home</a>
+                    </li>
+                    <!--      <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="About" asp-action="About"><i class="fa fa-newspaper-o" aria-hidden="true"></i>About</a>
+            </li>-->
+                    <li class="nav-item">
+
+                        <a class="nav-link" asp-area="" asp-controller="CSIT" asp-action="CSIT"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Courses</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" asp-area="" asp-controller="Note" asp-action="filedetails"><i class="fa fa-bell" aria-hidden="true"></i>Notices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Crud" asp-action="Students"><i class="fa fa-graduation-cap" aria-hidden="true"></i>All BSc.CSIT Students</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <div class="a_dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true">
+                                Select Semester
+                            </a>
+
+                            <div class="a_dropdown-content">
+                                <a class="dropdown-item" asp-area="" asp-controller="First" asp-action="Students">First Semester</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Second" asp-action="Students">Second Semester</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Third" asp-action="Students">Third Semester</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Fourth" asp-action="Students">Fourth Semester</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Fifth" asp-action="Students">Fifth Semester</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Sixth" asp-action="Students">Sixth Semester</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Seventh" asp-action="Students">Seventh Semester</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Eight" asp-action="Students">Eight Semester</a>
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+            <partial name="_LoginPartial.cshtml" />
+
+
+        </nav>
+      
+
+
+    </header>
+    <div style="width:100%;">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer>
+        <div class="container-fluid pl-4">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-4 list">
+
+                    <h4> Links </h4>
+                    <ul>
+
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-fw fa-home"></i>Home</a>
+                        </li>
+                        <!--   <li>
+                <a asp-area="" asp-controller="About" asp-action="About"><i class="fa fa-newspaper-o" aria-hidden="true"></i>About CSIT</a>
+            </li>
+            -->
+                        <li>
+
+                            <a asp-area="" asp-controller="CSIT" asp-action="CSIT"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Courses</a>
+                        </li>
+
+
+
+
+                        <li>
+
+                            <a asp-area="" asp-controller="Note" asp-action="filedetails"><i class="fa fa-bell" aria-hidden="true"></i>Notices</a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Crud" asp-action="Students"><i class="fa fa-graduation-cap" aria-hidden="true"></i>All BSc.CSIT Students</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/arjunstha713"><i class="fa fa-sticky-note" aria-hidden="true"></i>Feedback & Suggestions</a>
+                        </li>
+
+                    </ul>
+
+
+
+                </div>
+                <div class="col-md-2 col-sm-4 col-4">
+
+
+                    <h4>
+                        <span>AKS Company</span>
+                    </h4>
+                    <div class="clearfix et-footer-info-content" id="footer-general_843">
+                        <div class="ty-wysiwyg-content" data-ca-live-editor-object-id="0" data-ca-live-editor-object-type="">
+                            <div class="et-footer-info-wrapper">
+                                <div>
+                                    <i class="fa fa-location"></i>
+                                </div>
+                                <div>
+                                    <span class="footer-info">
+                                        Chhuchepati,Kathmandu
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="et-footer-info-wrapper">
+                                <div>
+                                    <i class=""></i>
+                                </div>
+                                <div>
+                                    <span class="footer-info">
+                                        011-412057,9808628769
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="et-footer-info-wrapper">
+                                <div>
+                                    <i class="fa fa-mail-bulk"></i>
+                                </div>
+                                <div>
+                                    <span class="footer-info">
+                                        support@arjunstha.com
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 col-sm-4 col-4">
+
+                    <h4>Follow Us on </h4>
+                    <ul>
+                        <li> <a href="https://www.facebook.com/arjunstha713" target="_blank"> <i class="fa fa-facebook-square fa-2x pr-3" aria-hidden="true"> </i>  <span class="social-link"> Facebook </span> </a>  </li>
+                        <li>
+                            <a href="https://instagram.com/arjunshrestha713" target="_blank">
+                                <i class="fa fa-instagram fa-2x pr-3" aria-hidden="true"></i>
+                                <span class="social-link">Instagram </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/arjunstha713" target="_blank">
+                                <i class="fa fa-twitter  fa-2x pr-3" aria-hidden="true"></i>
+                                <span class="social-link">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/watch?v=IVoGLOIG738&feature=youtu.be" target="_blank">
+                                <i class="fa fa-youtube-play fa-2x pr-3" aria-hidden="true"></i>
+                                <span class="social-link">Youtube</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/arjun-shrestha-29744b1a2/" target="_blank">
+                                <i class="fa fa-linkedin-square fa-2x pr-3" aria-hidden="true"></i>
+                                <span class="social-link">Linkedin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--   <div class="col-md-2 col-sm-4 col-4 newsletter">
+
+                        <h4>Newsletter </h4>
+                        <p>Sign up for the latest updates </p>
+
+                            <div class="form-group">
+
+                                <input type="hidden"  class="form-control" />
+
+                            </div>
+                            <div class="form-group">
+                                <input  type="email" name="email" placeholder="Place your email">
+                                </div>
+                                <div class="btn">
+                                    <button type="submit" class="btn btn-danger">Subscribe</button>
+                                </div>
+
+    </div>
+                   -->
+
+                <div class="col-md-4 col-sm-8 col-8 d-flex justify-content-between">
+
+                    <div class="location pl-4">
+
+                        <h5> Our Location </h5>
+
+                        <p> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d310.18900334777805!2d85.61810401185681!3d27.69956471769195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eba832dbf83593%3A0xc1fc09a628bb1bc7!2sMandan%20Deupur%20Municipality!5e1!3m2!1sen!2snp!4v1624632554529!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> </p>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="copyright">
+            <h4 style="text-align:center;">©2020-2021 Easy CSIT,All Rights Reserved,<a  asp-area="" asp-controller="MyProfile" asp-action="MyProfileIndex">Arjun Shrestha</a> </h4>
+        </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

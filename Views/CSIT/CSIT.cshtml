@@ -1,0 +1,581 @@
+﻿@{
+    ViewData["Title"] = "CSIT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<html>
+<head>
+
+</head>
+<body>
+    <div class="terms">
+
+        <div class="row">
+            <div class="col">
+
+                <h1 style="margin-top: 2%;" class="text-center">CSIT Courses</h1>
+                <p class="text-center">
+                    These are all the courses in CSIT faculty offered by TU. CSIT
+                    have
+                    62
+                    courses, among which 37 are compulsory &amp; 25 are elective.
+                </p>
+                @* <div class="row no-gutters" style="padding: 1%;">
+
+                    </div>*@
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">First semester</h3>
+                    <ol>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="IIT">Introduction to Information Technology (IIT)</a>
+
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="C">  C Programming</a>
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a c asp-controller="Course" asp-action="DL"> Digital Logic</a>
+
+                        </li>
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="Maths"> Mathematics I (Calculus)</a>
+
+
+                        </li>
+
+
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="Physics"> Physics</a>
+
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">Second semester</h3>
+                    <ol>
+                        <li>
+                            <a asp-controller="Course" asp-action="DS">  Discrete Structures</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="OOP">Object Oriented Programming</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="MICROPROCESSOR">      Microprocessor</a>
+
+                        </li>
+                        <li>
+                            <a asp-controller="Course" asp-action="MATHS2">  Mathematics II</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="STAT1">    Statistics I</a>
+
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">Third semester</h3>
+                    <ol>
+                        <li>
+                            <a asp-controller="Course" asp-action="DSA">Data Structures and Algorithms</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="NM">Numerical Method</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="CA"> Computer Architecture</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="CG"> Computer Graphics</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="STAT2"> Statistics II</a>
+
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">Fourth semester</h3>
+                    <ol>
+                        <li>
+                            <a asp-controller="Course" asp-action="TOC">Theory of Computation</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="CN">Computer Networks</a>
+
+                        </li>
+                        <li>
+                            <a asp-controller="Course" asp-action="OS">Operating Systems</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="DBMS">  Database Management System</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="AI">  Artificial Intelligence</a>
+
+                        </li>
+
+                </ul>
+                </ol>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">Fifth semester</h3>
+
+                    <ol>
+                        <li>
+                            <a asp-controller="Course" asp-action="DAA">Design and Analysis of Algorithms</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="SAD"> System Analysis and Design</a>
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="Cryptography"> Cryptography</a>
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="SM"> Simulation and Modelling</a>
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="WT"> Web Technology</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="MC">
+                                Multimedia Computing<span class="badge badge-info">Elective</span>
+                            </a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="WN">
+                                Wireless Networking<span class="badge badge-info">Elective</span>
+                            </a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="IP">
+                                Image Processing<span class="badge badge-info">Elective</span>
+                            </a>
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="KM">
+                                Knowledge Management<span class="badge badge-info">Elective</span>
+                            </a>
+
+                        </li>
+
+
+
+
+                        <li>
+
+                            <a asp-controller="Course" asp-action="SEIT">
+                                Society and Ethics in Information Technology <span class="badge badge-info">Elective</span>
+                            </a>
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="MBD">
+                                Microprocessor Based Design <span class="badge badge-info">Elective</span>
+                            </a>
+
+
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">Sixth semester</h3>
+                    <ol>
+                        <li>
+                            <a asp-controller="Course" asp-action="SE">Software Engineering</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="CDC">Compiler Design and Construction</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="EGovernance">E-Governance</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="NCC">NET Centric Computing</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="TW">Technical Writing</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="AL"> Applied Logic<span class="badge badge-info">Elective</span></a>
+
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="Ecommerce">E-commerce<span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="AR">Automation and Robotics<span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="NN">Neural Networks<span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="CHD">Computer Hardware Design<span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="CS">Cognitive Science<span class="badge badge-info">Elective</span></a>
+
+                        </li>
+                        <li>
+                            <a asp-controller="Course" asp-action="RTS">Real Time System (old-course)</a>
+
+
+                        </li>
+
+                    </ol>
+                </ul>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">Seventh semester</h3>
+
+                    <ol>
+                        <li>
+                            <a asp-controller="Course" asp-action="DWDM"> Data Warehousing and Data Mining</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="POM">    Principles Of Management</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="AJP"> Advanced Java Programming</a>
+
+                        </li>
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="PW">  Project Work</a>
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="IR"> Information Retrieval <span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="DA"> Database Administration <span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="NS">
+                                Network Security
+                                <span class="badge badge-info">Elective</span>
+                            </a>
+
+                        </li>
+
+
+
+                        <li>
+
+                            <a asp-controller="Course" asp-action="SPM">  Software Project Management<span class="badge badge-info">Elective</span></a>
+
+
+                        </li>
+                        <li>
+
+                            <a asp-controller="Course" asp-action="DSD">  Digital System Design<span class="badge badge-info">Elective</span></a>
+
+
+                        </li>
+                        <li>
+
+                            <a asp-controller="Course" asp-action="IM">  International Marketing<span class="badge badge-info">Elective</span></a>
+
+
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-top: 4%">
+                <ul class="list-unstyled f_list">
+                    <h3 class="f-title f_600 t_color f_size_18">Eighth semester</h3>
+
+                    <ol>
+
+
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="Internship">Internship</a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="AN">Advanced Networking with IPv6 <span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="NSA"> Network and System Administrations<span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="MD">Multimedia Database<span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="DOOD">Distributed and Object Oriented Database  <span class="badge badge-info">Elective</span></a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="cc">
+                                Cloud Computing
+                                <span class="badge badge-info">Elective</span>
+                            </a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="GIS">
+                                Geographical Information System
+                                <span class="badge badge-info">Elective</span>
+                            </a>
+
+                        </li>
+
+
+
+
+                        <li>
+                            <a asp-controller="Course" asp-action="DSS">
+                                Decision Support System
+                                <span class="badge badge-info">Elective</span>
+                            </a>
+
+
+
+                        </li>
+
+                        <li>
+                            <a asp-controller="Course" asp-action="DN">
+                                Distributed Networking
+                                <span class="badge badge-info">Elective</span>
+                            </a>
+
+
+
+                        </li>
+                    </ol>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="row no-gutters" style="padding: 1%;">
+
+        </div>
+    </div>
+
+
+
+    </body>
+</html>

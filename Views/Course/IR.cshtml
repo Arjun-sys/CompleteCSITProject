@@ -1,0 +1,326 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "IR";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="terms">
+    <main>
+
+        <div class="row no-gutters">
+            <div class="col" style="margin-bottom: 1%; text-align: center;">
+                <h1 style="margin-top: 1%;" class="text-center">Information Retrieval Syllabus</h1>
+                <a asp-controller="Course" asp-action="IR" class=" btn btn-info">Syllabus</a>
+                <a asp-controller="Course" asp-action="IRnote" class=" btn btn-outline-info">Notes</a>
+
+
+
+            </div>
+        </div>
+      
+
+
+
+            <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+
+                <div class="card-body p-0">
+                    <table class="table table-sm">
+
+                        <tbody>
+                            <tr>
+                                <td>Title</td>
+
+                                <td>
+                                    Information Retrieval
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Course code</td>
+
+                                <td>CSC413</td>
+                            </tr>
+                            <tr>
+                                <td>Nature of course</td>
+
+                                <td>Theory + Lab</td>
+                            </tr>
+                            <tr>
+                                <td>Semester</td>
+
+                                <td>Seventh-Semester</td>
+                            </tr>
+                            <tr>
+                                <td>Full marks</td>
+
+                                <td>60 + 20 + 20</td>
+                            </tr>
+                            <tr>
+                                <td>Pass marks</td>
+
+                                <td>24 + 8 + 8</td>
+                            </tr>
+                            <tr>
+                                <td>Credit Hrs</td>
+
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Elective/Compulsary</td>
+
+                                <td>Elective</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fa fa-book"></i>
+                                Course Description
+                            </h3>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <p>
+                                <b>Course Synopsis:</b> This course familiarizes students with different concepts of information retrieval techniques
+                                mainly focused on clustering, classification, search engine, ranking and query operations
+                                techniques.
+                                The main objective of this course is to provide knowledge of different information retrieval
+                                techniques so that the students will be able to develop information retrieval engine.
+                           <div><br></div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- ./col -->
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fa fa-file"></i>
+                                Units and Unit Content
+                            </h3>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <dl>
+
+                                <dt>
+                                    1.
+                                    Introduction to IR and Wheb Search
+                                </dt>
+                                <dt>Teaching Hours: 2 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Introduction, Data vs Information Retrieval, Logical view of the documents, Architecture of IR
+                                        System, Web search system, History of IR, Related areas
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    2.
+                                    Text properties, operations and preprocessing
+                                </dt>
+                                <dt>Teaching Hours: 5 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Tokenization, Text Normalization, Stop-word removal, Morphological Analysis, Word
+                                        Stemming (Porter Algorithm), Case folding, Lemmatization, Word statistics (Zipf's law, Heaps’
+                                        Law), Index term selection, Inverted indices, Positional Inverted index, Natural Language
+                                        Processing in Information Retrieval, Basic NLP tasks – POS tagging; shallow parsing
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    3.
+                                    Basic IR Models
+                                </dt>
+                                <dt>Teaching Hours: 5 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Classes of Retrieval Model, Boolean model, Term weighting mechanism – TF, IDF, TF-IDF
+                                        weighting, Cosine Similarity, Vector space model , Probabilistic models (the binary
+                                        independence model ,Language models; · KL-divergence; · Smoothing), Non-Overlapping Lists,
+                                        Proximal Nodes Mode
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    4.
+                                    Evaluation of IR
+                                </dt>
+                                <dt>Teaching Hours: 2 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Precision, Recall, F-Measure, MAP (Mean Average Precision), (DCG) Discounted Cumulative
+                                        Gain, Known-item Search Evaluation
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    5.
+                                    Query Operations and Languages
+                                </dt>
+                                <dt>Teaching Hours: 4 hrs</dt>
+                                <dd><p>Relevance feedback and pseudo relevance feedback, Query expansion/reformulation (with a thesaurus or WordNet, Spelling correction like techniques), Query languages (Single-Word Queries, Context Queries, Boolean Queries, Natural Language)</p><div><br></div></dd>
+
+                                <dt>
+                                    6.
+                                    Web Search
+                                </dt>
+                                <dt>Teaching Hours: 6 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Search engines (working principle), Spidering (Structure of a spider, Simple spidering algorithm,
+                                        multithreaded spidering, Bot), Directed spidering (Topic directed, Link directed), Crawlers 109
+                                        (Basic crawler architecture), Link analysis (HITS, Page ranking), Query log analysis, Handling
+                                        “invisible” Web – Snippet generation, CLIR (Cross Language Information Retrieval)
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    7.
+                                    Text Categorization
+                                </dt>
+                                <dt>Teaching Hours: 4 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Categorization, Learning for Categorization, General learning issues, Learning algorithms:
+                                        Bayesian (naïve), Decision tree, KNN, Rocchio)
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    8.
+                                    Text  Clustering
+                                </dt>
+                                <dt>Teaching Hours: 4 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Clustering, Clustering algorithms (Hierarchical clustering, k-means, k-medoid, Expectation
+                                        maximization (EM), Text shingling)
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    9.
+                                    Recommender Systems
+                                </dt>
+                                <dt>Teaching Hours: 3 hrs</dt>
+                                <dd><p>Personalization, Collaborative filtering recommendation, Content-based recommendation</p><div><br></div></dd>
+
+                                <dt>
+                                    10.
+                                    Question Answering
+                                </dt>
+                                <dt>Teaching Hours: 5 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Information bottleneck, Information Extraction, Ambiguities in IE, Architecture of QA system,
+                                        Question processing, Paragraph retrieval, Answer processing
+                                    </p><div><br></div>
+                                </dd>
+
+                                <dt>
+                                    11.
+                                    Advanced IR Models
+                                </dt>
+                                <dt>Teaching Hours: 4 hrs</dt>
+                                <dd>
+                                    <p>
+                                        Latent Semantic Indexing (LSI), Singular value decomposition, Latent Dirichlet Allocation,
+                                        Efficient string searching, Knuth – Morris – Pratt, Boyer – Moore Family, Pattern matching
+                                    </p><div><br></div>
+                                </dd>
+
+
+
+                            </dl>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- ./col -->
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fa fa-desktop"></i>
+                                <i class="fa fa-flask"></i>
+                                Lab and Practical works
+                            </h3>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <p><b>Laboratory Works:</b></p><p>The laboratory should contain all the features mentioned in a course</p><p>Samples</p><p>1. Program to demonstrate the Boolean Retrieval Model and Vector Space Model</p><p>2. Tokenize the words of large documents according to type and token.</p><p>3. Program to find the similarity between documents</p><p>4. Implement Porter stemmer</p><p>5. Build a spider that tracks only the link of nepali documents</p><p>6. Group the online news onto different categorize like sports, entertainment, politics</p><p>7. Build a recommender system for online music store</p><div><br></div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- ./col -->
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <i class="fa fa-book"></i>
+                                Recommended Books
+                            </h3>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <p>
+
+                                <br />1. Modern Information Retrieval, Ricardo Baeza-Yates, Berthier Ribeiro-Neto.
+
+                                <br />2. Information Retrieval; Data Structures & Algorithms: Bill Frakes
+
+
+                            </p>
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- ./col -->
+
+            </div>
+
+
+
+    </main>
+</div>
+
+    @*   <a class="btn btn-success" asp-controller="Note" asp-action="FileDetails">Note</a>
+         
+    *@

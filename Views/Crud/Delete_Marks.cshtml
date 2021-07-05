@@ -1,0 +1,62 @@
+﻿@model EasyCSIT.Models.MarkModel
+
+@{
+    ViewData["Title"] = "Delete_Marks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete_Marks</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+@using (Html.BeginForm("Delete_Marks", "Crud", FormMethod.Post))
+
+{
+    @Html.HiddenFor(x => Model.MarkId)
+    <div>
+        <h4>MarkModel</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.MarkId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.MarkId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.StudentId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.StudentId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.TheoryMark)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TheoryMark)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PracticalMark)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PracticalMark)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.InternalMark)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.InternalMark)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SubjectId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SubjectId)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete_Marks">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Marks">Back to List</a>
+        </form>
+    </div>
+}

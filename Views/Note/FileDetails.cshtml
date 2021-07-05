@@ -1,0 +1,276 @@
+﻿@model List<EasyCSIT.FileDetails>
+
+@{
+    ViewData["Title"] = "FileDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <style>
+        /* style for the css menu dropdown container */
+        .menu {
+            position: relative;
+            display: inline-block;
+            ​ z-index:2;
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            text-align: left;
+        }
+
+            /* style for the button */
+            .menu:before {
+                content: "\2630 \a0 More";
+                color: #555;
+                padding: 5px 10px;
+                border: 1px solid #555;
+                border-radius: 3px;
+                background: white;
+            }
+
+            .menu:focus {
+                pointer-events: none;
+            }
+
+                /* If :focus detected the dropdown menu is displayed by making it visible */
+                .menu:focus .menu-dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+        /* style for the dropdown box */
+        .menu-dropdown {
+            background-color: white;
+            width: auto;
+            margin: 3px 0 0 0;
+            padding: 15px;
+            border-radius: 3px;
+            border: 1px black solid;
+            border-radius: 3px;
+            pointer-events: auto;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: visibility 1s;
+            background: #f8f8ff;
+        }
+
+            /* style the links in the dropdown */
+            .menu-dropdown a {
+                background: transparent;
+                border: none;
+                outline: 0;
+                display: block;
+                color: #808080;
+                text-decoration: none;
+                width: 100px;
+                padding: 2px;
+            }
+
+                .menu-dropdown a:hover {
+                    color: black;
+                }
+    </style>
+
+</head>
+<body>
+
+    <style>
+        .container-fluid {
+            width: 100%;
+            padding-right: 55px;
+            padding-left: 55px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        }
+    </style>
+
+
+    <div class="container-fluid">
+
+
+
+        <p>
+            <a asp-action="Create" class="btn btn-info">
+                Upload Post
+            </a>
+
+        </p>
+        <div class="card-img">
+
+            <table>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+
+                            <td>
+
+                                <b> Posted By:&nbsp; @Html.DisplayFor(modelItem => item.Name)</b>
+                            </td>
+                            <td>
+                                <div tabindex="0" class="menu">
+
+                                    <div class="menu-dropdown">
+
+                                       
+
+                                        @Html.ActionLink("Edit Post", "Edit", new { Id = item.Id })
+                                        <hr />
+
+                                        @Html.ActionLink("Delete Post", "Delete", new { id = item.Id })
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+
+                                @item.FileDate
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td>
+
+                                @item.Description
+                            </td>
+                        </tr>
+
+                        <tr>
+                        </tr>
+
+
+
+
+
+
+
+                        <tr>
+                            <td>
+                                <div id="demo"></div>
+                                <img src="~/images/@item.FileContent" style="max-height:800px;max-width:800px;" alt="@item.FileContent" class="img-responsive">
+                                @*   <script type="text/javascript">
+
+                                                            document.getElement("img");
+                                                                var extn =@item.FileContent.Substring(@item.FileContent.LastIndexOf('.') + 1).ToLower();
+                                                                if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg")
+                                                                {
+                                                                  var img = document.getElementByTagName("img').setAttribute("src", "~/images/@item.FileContent");
+                                    document.getElementById("demo").innerHTML = img.innerHTML;
+                                                                    }
+                                                                else if (extn == "mp4" || extn == "mpeg" || extn == "wmv" || extn == "rm" || extn == "mpg" || extn == "mov"))
+                                                                  {
+                                                                  var video = document.getElementById('vid');
+                                                                video.src = "~/images/@item.FileContent";
+
+                                                                    }
+
+
+
+                                                            </script>
+                                                            <video id="vid">
+
+
+                                                    <script type="text/javascript">
+
+
+                                                                            var extn =@item.FileContent.Substring(@item.FileContent.LastIndexOf('.') + 1).ToLower();
+                                                                            if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg")
+                                                                            {
+                                                                              var img = document.getElementById("immg");
+                                                                            img.src = "~/images/@item.FileContent";
+
+                                                                                }
+                                                                            else if (extn == "mp4" || extn == "mpeg" || extn == "wmv" || extn == "rm" || extn == "mpg" || extn == "mov"))
+                                                                              {
+                                                                              var video = document.getElementById('vid');
+                                                                            video.src = "~/images/@item.FileContent";
+
+                                                        }
+
+
+
+
+                                                    </script>
+                                                    <img src="img.src" height="400" width="400" alt="@item.FileContent">
+                                *@
+
+
+                            </td>
+
+
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="row">
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="\images\@item.FileContent" class="card-link"><i class="fa fa-eye mr-2" aria-hidden="true"></i>Read</a>
+                                    <a href="\images\@item.FileContent" download="" target="blank" class="card-link"><i class="fa fa-download mr-2" aria-hidden="true"></i>Download</a>
+                                    &nbsp;&nbsp; &nbsp;&nbsp;
+                                    <div class="fb-share-button fb_iframe_widget" data-href= href="\images\@item.FileContent" data-layout="button" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=234991697616160&amp;container_width=0&amp;href=https%3A%2F%2Fcollegenote.pythonanywhere.com%2Fnote%2FCSIT%2F54%2Fsixth-semester%2Fcomplier-design-and-construction%2Fintroduction-and-compiler-structure%2F262%2Fview%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey"><span style="vertical-align: bottom; width: 67px; height: 20px;"><iframe name="f13daa21f739d2" width="1000px" height="1000px" data-testid="fb:share_button Facebook Social Plugin" title="fb:share_button Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v9.0/plugins/share_button.php?app_id=234991697616160&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df221d9250ba2f9%26domain%3Dcollegenote.pythonanywhere.com%26origin%3Dhttps%253A%252F%252Fcollegenote.pythonanywhere.com%252Ff317adc6ed6f284%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fcollegenote.pythonanywhere.com%2Fnote%2FCSIT%2F54%2Fsixth-semester%2Fcomplier-design-and-construction%2Fintroduction-and-compiler-structure%2F262%2Fview%2F&amp;layout=button&amp;locale=en_US&amp;sdk=joey" style="border: none; visibility: visible; width: 67px; height: 20px;" class=""></iframe></span></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+
+
+
+                        <tr>
+
+
+                            <td>
+                                <hr />
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+

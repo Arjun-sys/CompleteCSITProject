@@ -1,0 +1,67 @@
+﻿@model IEnumerable<StudentModel>
+
+@{
+    ViewData["Title"] = "Students";
+    int studentCounter = 1;
+}
+
+<h1>Students</h1>
+
+<p>
+   <button><a asp-action="Create">Create New</a>
+    </button> 
+    <button><a asp-action="Marks">MarkSheet</a></button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               SN
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Batch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </th>
+            <th>
+                Actions
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @studentCounter
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Batch) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { studentId = item.StudentId }) |
+                @Html.ActionLink("Details", "Details", new { studentId = item.StudentId }) |
+                @Html.ActionLink("Delete", "Delete", new { studentId = item.StudentId })|
+                @Html.ActionLink("Marks", "StudentMarks" ,"Mark",new { studentId = item.StudentId })
+            </td>
+        </tr>
+    studentCounter++;
+}
+    </tbody>
+</table>

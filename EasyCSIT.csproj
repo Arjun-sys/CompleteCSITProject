@@ -1,0 +1,341 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>b6bee3fa-b67c-44d3-8007-43543dbc6248</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Mocks\**" />
+    <Compile Remove="obj\**" />
+    <Compile Remove="Pages\**" />
+    <Compile Remove="Repositories\**" />
+    <Compile Remove="ViewModel\**" />
+    <Compile Remove="Views\Mobile\**" />
+    <Compile Remove="wwwroot\IIT\**" />
+    <Content Remove="Interfaces\**" />
+    <Content Remove="Mocks\**" />
+    <Content Remove="obj\**" />
+    <Content Remove="Pages\**" />
+    <Content Remove="Repositories\**" />
+    <Content Remove="ViewModel\**" />
+    <Content Remove="Views\Mobile\**" />
+    <Content Remove="wwwroot\IIT\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Mocks\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
+    <EmbeddedResource Remove="Views\Mobile\**" />
+    <EmbeddedResource Remove="wwwroot\IIT\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="Mocks\**" />
+    <None Remove="obj\**" />
+    <None Remove="Pages\**" />
+    <None Remove="Repositories\**" />
+    <None Remove="ViewModel\**" />
+    <None Remove="Views\Mobile\**" />
+    <None Remove="wwwroot\IIT\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\CoursController.cs" />
+    <Compile Remove="Controllers\MobileController.cs" />
+    <Compile Remove="DatabaseContext.cs" />
+    <Compile Remove="Models\Category.cs" />
+    <Compile Remove="Models\Mobile.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.483" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="Font.Awesome" Version="5.15.3" />
+    <PackageReference Include="HttpPostedFileHelper" Version="1.2.0" />
+    <PackageReference Include="IdentityServer3" Version="2.6.3" />
+    <PackageReference Include="MailKit" Version="2.13.0" />
+    <PackageReference Include="Microsoft.AspNet.SignalR" Version="2.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Syncfusion.HtmlToPdfConverter.QtWebKit.Net.Core" Version="18.4.0.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Course\AI.cshtml" />
+    <None Include="Views\Course\AJP.cshtml" />
+    <None Include="Views\Course\AJPnote.cshtml" />
+    <None Include="Views\Course\AL.cshtml" />
+    <None Include="Views\Course\AN.cshtml" />
+    <None Include="Views\Course\AR.cshtml" />
+    <None Include="Views\Course\C.cshtml" />
+    <None Include="Views\Course\CA.cshtml" />
+    <None Include="Views\Course\CC.cshtml" />
+    <None Include="Views\Course\CDC.cshtml" />
+    <None Include="Views\Course\CDCnote.cshtml" />
+    <None Include="Views\Course\CG.cshtml" />
+    <None Include="Views\Course\CHD.cshtml" />
+    <None Include="Views\Course\CN.cshtml" />
+    <None Include="Views\Course\Cnote.cshtml" />
+    <None Include="Views\Course\Cryptography.cshtml" />
+    <None Include="Views\Course\CS.cshtml" />
+    <None Include="Views\Course\DA.cshtml" />
+    <None Include="Views\Course\DAA.cshtml" />
+    <None Include="Views\Course\DBMS.cshtml" />
+    <None Include="Views\Course\DL.cshtml" />
+    <None Include="Views\Course\DLnote.cshtml" />
+    <None Include="Views\Course\DN.cshtml" />
+    <None Include="Views\Course\DOOD.cshtml" />
+    <None Include="Views\Course\DS.cshtml" />
+    <None Include="Views\Course\DSA.cshtml" />
+    <None Include="Views\Course\DSD.cshtml" />
+    <None Include="Views\Course\DSS.cshtml" />
+    <None Include="Views\Course\DWDM.cshtml" />
+    <None Include="Views\Course\DWDMnote.cshtml" />
+    <None Include="Views\Course\Ecommerce.cshtml" />
+    <None Include="Views\Course\Ecommercenote.cshtml" />
+    <None Include="Views\Course\Egovernance.cshtml" />
+    <None Include="Views\Course\Egovernancenote.cshtml" />
+    <None Include="Views\Course\GIS.cshtml" />
+    <None Include="Views\Course\IIT.cshtml" />
+    <None Include="Views\Course\IITnote.cshtml" />
+    <None Include="Views\Course\IM.cshtml" />
+    <None Include="Views\Course\Internship.cshtml" />
+    <None Include="Views\Course\IP.cshtml" />
+    <None Include="Views\Course\IR.cshtml" />
+    <None Include="Views\Course\IRnote.cshtml" />
+    <None Include="Views\Course\KM.cshtml" />
+    <None Include="Views\Course\Mathnote.cshtml" />
+    <None Include="Views\Course\Maths.cshtml" />
+    <None Include="Views\Course\MATHS2.cshtml" />
+    <None Include="Views\Course\MBD.cshtml" />
+    <None Include="Views\Course\MC.cshtml" />
+    <None Include="Views\Course\MD.cshtml" />
+    <None Include="Views\Course\MICROPROCESSOR.cshtml" />
+    <None Include="Views\Course\NCC.cshtml" />
+    <None Include="Views\Course\NCCnote.cshtml" />
+    <None Include="Views\Course\NM.cshtml" />
+    <None Include="Views\Course\NN.cshtml" />
+    <None Include="Views\Course\NS.cshtml" />
+    <None Include="Views\Course\NSA.cshtml" />
+    <None Include="Views\Course\OOP.cshtml" />
+    <None Include="Views\Course\OS.cshtml" />
+    <None Include="Views\Course\Physics.cshtml" />
+    <None Include="Views\Course\Physicsnote.cshtml" />
+    <None Include="Views\Course\POM.cshtml" />
+    <None Include="Views\Course\POMnote.cshtml" />
+    <None Include="Views\Course\PW.cshtml" />
+    <None Include="Views\Course\RTS.cshtml" />
+    <None Include="Views\Course\SAD.cshtml" />
+    <None Include="Views\Course\SE.cshtml" />
+    <None Include="Views\Course\SEIT.cshtml" />
+    <None Include="Views\Course\SEnote.cshtml" />
+    <None Include="Views\Course\SM.cshtml" />
+    <None Include="Views\Course\SPM.cshtml" />
+    <None Include="Views\Course\STAT1.cshtml" />
+    <None Include="Views\Course\STAT2.cshtml" />
+    <None Include="Views\Course\TOC.cshtml" />
+    <None Include="Views\Course\TW.cshtml" />
+    <None Include="Views\Course\TWnote.cshtml" />
+    <None Include="Views\Course\WN.cshtml" />
+    <None Include="Views\Course\WT.cshtml" />
+    <None Include="Views\Crud\Add_Markslip.cshtml" />
+    <None Include="Views\Crud\Create.cshtml" />
+    <None Include="Views\Crud\CreateExam.cshtml" />
+    <None Include="Views\Crud\createMarksheet.cshtml" />
+    <None Include="Views\Crud\CreateSubject.cshtml" />
+    <None Include="Views\Crud\Delete.cshtml" />
+    <None Include="Views\Crud\Delete_Marks.cshtml" />
+    <None Include="Views\Crud\Details.cshtml" />
+    <None Include="Views\Crud\Edit.cshtml" />
+    <None Include="Views\Crud\Edit_Marks.cshtml" />
+    <None Include="Views\Crud\Marks.cshtml" />
+    <None Include="Views\Crud\StudentMarks.cshtml" />
+    <None Include="Views\Crud\Students.cshtml" />
+    <None Include="Views\CSIT\CSIT.cshtml" />
+    <None Include="Views\Eight\Add_Markslip.cshtml" />
+    <None Include="Views\Eight\Students.cshtml" />
+    <None Include="Views\Fifth\Add_Markslip.cshtml" />
+    <None Include="Views\Fifth\Students.cshtml" />
+    <None Include="Views\First\Add_Markslip.cshtml" />
+    <None Include="Views\First\Students.cshtml" />
+    <None Include="Views\Fourth\Add_Markslip.cshtml" />
+    <None Include="Views\Fourth\Students.cshtml" />
+    <None Include="Views\Home\index.cshtml" />
+    <None Include="Views\MyProfile\MyProfileIndex.cshtml" />
+    <None Include="Views\MyProfile\MyProfileView.cshtml" />
+    <None Include="Views\Note\Create.cshtml" />
+    <None Include="Views\Note\Delete.cshtml" />
+    <None Include="Views\Note\Edit.cshtml" />
+    <None Include="Views\Note\FileDetails.cshtml" />
+    <None Include="Views\Second\Add_Markslip.cshtml" />
+    <None Include="Views\Second\Students.cshtml" />
+    <None Include="Views\Seventh\Add_Markslip.cshtml" />
+    <None Include="Views\Seventh\Students.cshtml" />
+    <None Include="Views\Sixth\Add_Markslip.cshtml" />
+    <None Include="Views\Sixth\Students.cshtml" />
+    <None Include="Views\Student\Students.cshtml" />
+    <None Include="Views\Third\Add_Markslip.cshtml" />
+    <None Include="Views\Third\Students.cshtml" />
+    <None Include="wwwroot\assets\js\main.js" />
+    <None Include="wwwroot\assets\vendor\aos\aos.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <None Include="wwwroot\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <None Include="wwwroot\assets\vendor\glightbox\js\glightbox.js" />
+    <None Include="wwwroot\assets\vendor\glightbox\js\glightbox.min.js" />
+    <None Include="wwwroot\assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <None Include="wwwroot\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <None Include="wwwroot\assets\vendor\php-email-form\validate.js" />
+    <None Include="wwwroot\assets\vendor\purecounter\purecounter.js" />
+    <None Include="wwwroot\assets\vendor\swiper\swiper-bundle.min.js" />
+    <None Include="wwwroot\assets\vendor\typed.js\typed.js" />
+    <None Include="wwwroot\assets\vendor\typed.js\typed.min.js" />
+    <None Include="wwwroot\assets\vendor\typed.js\typed.min.js.map" />
+    <None Include="wwwroot\assets\vendor\waypoints\noframework.waypoints.js" />
+    <None Include="wwwroot\fonts2\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts2\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts2\font-awesome\less\animated.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\bordered-pulled.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\core.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\fixed-width.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\font-awesome.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\icons.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\larger.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\list.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\mixins.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\path.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\rotated-flipped.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\stacked.less" />
+    <None Include="wwwroot\fonts2\font-awesome\less\variables.less" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\font-awesome.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_animated.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_core.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_fixed-width.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_icons.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_larger.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_list.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_mixins.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_path.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_stacked.scss" />
+    <None Include="wwwroot\fonts2\font-awesome\scss\_variables.scss" />
+    <None Include="wwwroot\fonts2\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\fonts2\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\Identity\js\site.js" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\Identity\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\Identity\lib\bootstrap\LICENSE\LICENSE" />
+    <None Include="wwwroot\Identity\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\Identity\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\Identity\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\Identity\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\Identity\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\Identity\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\Identity\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\Identity\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\Identity\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\Identity\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\js2\bootstrap.js" />
+    <None Include="wwwroot\js2\bootstrap.min.js" />
+    <None Include="wwwroot\js2\contact_me.js" />
+    <None Include="wwwroot\js2\jqBootstrapValidation.js" />
+    <None Include="wwwroot\js2\jquery.1.11.1.js" />
+    <None Include="wwwroot\js2\main.js" />
+    <None Include="wwwroot\js2\nivo-lightbox.js" />
+    <None Include="wwwroot\js2\SmoothScroll.js" />
+    <None Include="wwwroot\js\vendor\html5shiv.js" />
+    <None Include="wwwroot\js\vendor\respond.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\mail2\contact_me.php" />
+    <None Include="wwwroot\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\indeximg\" />
+    <Folder Include="wwwroot\pdf\2\" />
+    <Folder Include="wwwroot\pdf\3\" />
+  </ItemGroup>
+
+</Project>

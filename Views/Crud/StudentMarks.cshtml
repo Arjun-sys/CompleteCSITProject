@@ -1,0 +1,451 @@
+﻿@model IEnumerable<EasyCSIT.Models.MarksModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "StudentMarks";
+    int MarkCounter = 1;
+}
+
+
+<html>
+<head>
+    <style type="text/css">
+        td,th {
+           padding:-0.25rem;
+        }
+
+        th {
+            font-size: 14px;
+        }
+
+        td, tr {
+            font-size: 12px;
+            color: #222121;
+        }
+        .container1 {
+            width: 101%;
+            border: solid black 1px;
+            margin: 0px auto;
+            padding: 5px 5px;
+            font-family: 'Times New Roman';
+        }
+        p{
+            margin-top:-9px;
+           
+        }
+    </style>
+
+</head>
+
+
+<body style="width:100%;">
+    @{Html.BeginForm("ExportToPDF", "Crud", FormMethod.Post);
+        {
+            <input type="submit" class="Button" value="Export To PDF" />
+
+        }}
+  
+   
+
+    <div class="container1 ">
+
+
+        <div>
+          
+
+            @if (Model.ToList().Count >= 4)
+            {
+
+                <p align="center">
+
+                    <img src="/images/Tu_2.png" height="80px" width="80px">
+
+                </p>
+
+                <p style="text-align:center;">
+
+                    <b>  Tribhuvan University</b>
+
+                </p>
+                <p style="text-align:center;">
+
+                    <b> INSTITUTE OF SCIENCE AND TECHNOLOGY</b>
+
+                </p>
+                <p style="text-align:center;">
+
+                    <b style="font-size:16px;">Dean's Office</b>
+
+                </p>
+
+                <p style="text-align:center;">
+                  
+                        <b>SEMESTER EXAMINATION</b>
+                    
+                </p>
+                <p style="text-align:center;">
+
+                    <u> <b>PROVISIONAL STATEMENT OF MARKS</b></u>
+
+                </p>
+
+
+                <p> <b>Name:</b>  <span style="color: #554a4a">@Model.ToList()[0].StudentName</span></p>
+
+                <p><b>Symbol No:</b><span style="color: #554a4a">@Model.ToList()[0].StudentRoll</span>/<span>@Model.ToList()[0].Batch</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>T.U.Redg.No:</b> <span style="color: #554a4a">@Model.ToList()[0].RegistrationNumber</span></p>
+
+
+                <p> <b>Level:Four Years Bachelor's Degree in Computer Science and Information Technology</b></p>
+
+                <p> <b>Campus:</b><span style="color: #554a4a">@Model.ToList()[0].CollegeName</span></p>
+
+
+                <table class="table" border="1" align="center" style="margin:0px auto;">
+                    <thead>
+                        <tr>
+                            <th colspan="20" style="text-align:center; font-size:18px;">
+                                <script>
+                                var sem = "@Model.ToList()[0].Semester";
+
+                        if (sem== "First" ||sem== "Second")
+                            document.write("First year");
+                        else if (sem== "Third" ||sem== "Fourth")
+                            document.write("Second Year");
+                         else if (sem== "Fifth" ||sem== "Sixth")
+                            document.write("Third Year");
+                        else if (sem== "Seventh" ||sem== "Eight")
+                            document.write("Fourth Year");
+                                </script>
+
+                                : <span>@Model.ToList()[0].Semester</span>  Semester
+                                <br />
+                                <p id="p1"></p>
+
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <th rowspan="2">
+                                Course No.
+                            </th>
+                            <th rowspan="2">
+                                Subject
+                            </th>
+
+                            <th colspan="4">
+                                Full Marks
+
+                            </th>
+                            <th colspan="4">
+                                Pass Marks
+
+                            </th>
+                            <th colspan="4">
+                                Mark Obtained
+
+                            </th>
+                            <th rowspan="2">
+                                Credit Hrs.
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Asst.
+                            </th>
+                            <th>
+                                Pract.
+                            </th>
+                            <th>
+                                Sem.
+                            </th>
+                            <th>
+                                Total
+                            </th>
+
+
+                            <th>
+                                Asst.
+                            </th>
+                            <th>
+                                Pract.
+                            </th>
+                            <th>
+                                Sem.
+                            </th>
+                            <th>
+                                Total
+                            </th>
+
+                            <th>
+                                Asst.
+                            </th>
+                            <th>
+                                Pract.
+                            </th>
+                            <th>
+                                Sem.
+                            </th>
+                            <th>
+                                Total
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td style="color:#222121">
+                                    @Html.DisplayFor(modelItem => item.SubjectId)
+
+                                </td>
+
+                                <td style="color: #222121">
+                                    @Html.DisplayFor(modelItem => item.SubjectName)
+                                </td>
+
+                                <td>
+                                    <script>
+                                var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                if (code=="CSC412")
+                                document.write("-");
+                                else
+                                document.write(20);
+                                    </script>
+
+                                </td>
+                                <td>
+                                    <script>
+                                var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                    if (code == "MTH112" || code == "CSC368" || code == "MTH163" || code == "MGT411" || code == "CSC412")
+                                document.write("-");
+                                else
+                                        document.write(20);
+                                    </script>
+                                </td>
+                                <td>
+                                    <script>
+                                var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                if (code=="CSC412")
+                                    document.write("100");
+                                else if (code == "MTH112" || code == "CSC368" || code == "MTH163" || code == "MGT411" )
+                                    document.write("80");
+                                else
+                                document.write(60);
+                                    </script>
+
+                                </td>
+                                <td>
+                                    100
+
+                                </td>
+                                <td>
+                                    <script>
+                                var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                if (code=="CSC412")
+                                    document.write("-");
+
+                                else
+                                document.write(8);
+                                    </script>
+
+                                </td>
+                                <td>
+                                    <script>
+                                var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                 if (code == "MTH112" || code == "CSC368" || code == "MTH163" || code == "MGT411" || code == "CSC412")
+                                     document.write("-");
+                                else
+                                document.write(8);
+                                    </script>
+
+
+
+                                </td>
+                                <td>
+
+                                    <script>
+                                    var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                    if (code == "CSC412")
+                                        document.write(40);
+                                else if (code == "MTH112" || code == "CSC368" || code == "MTH163" || code == "MGT411")
+                                     document.write("32");
+                                else
+                                document.write(24);
+                                    </script>
+
+                                </td>
+                                <td>
+                                    40
+
+                                </td>
+
+                                <td>
+                                    <script>
+                                    var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                    if ( code == "CSC412")
+                                        document.write("-");
+                                    else
+                                        document.write(@Html.DisplayFor(modelItem => item.InternalMark));
+                                    </script>
+
+                                </td>
+                                <td>
+                                    <script>
+                                    var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                    if (code == "MTH112" || code == "CSC368" ||code=="MTH163"||code=="MGT411"||code=="CSC412")
+                                        document.write("-");
+                                    else
+                                        document.write(@Html.DisplayFor(modelItem => item.PracticalMark));
+                                    </script>
+
+                                </td>
+
+                                <td>
+
+                                    <script>
+                                     var code = "@Html.DisplayFor(modelItem => item.SubjectId)";
+                                    if (code == "MTH112" || code == "CSC368" ||code=="MTH163"||code=="MGT411")
+                                        document.write(eval("@item.TheoryMark+@item.PracticalMark"));
+                                    else if (code == "CSC412")
+                                        document.write(eval("@item.TheoryMark+@item.PracticalMark+@item.InternalMark"));
+                                    else
+                                        document.write(@Html.DisplayFor(modelItem => item.TheoryMark));
+                                    </script>
+                                </td>
+
+
+                                <td>
+                                    <script>
+                                var total = eval("@item.TheoryMark+@item.PracticalMark+@item.InternalMark");
+                                document.write(total);
+                                    </script>
+                                </td>
+                                <td>
+                                    3Cr.
+                                </td>
+
+                            </tr>
+                            MarkCounter++;
+                        }
+                        <tr style="font-weight:bold">
+                            <td colspan="2">
+
+                                Grand Total:
+                            </td>
+
+
+                            <td>
+                            </td>
+
+
+                            <td>
+                            </td>
+
+
+                            <td>
+                            </td>
+
+
+                            <td>
+                                <script type="text/javascript">
+                                var per =@MarkCounter-1;
+                                document.write(eval("per*100"));
+                                </script>
+
+
+                            </td>
+
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+
+
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+
+
+                            <td>
+                            </td>
+
+
+                            <td>
+                            </td>
+
+
+                            <td>
+                                <span>
+                                    <script>
+                                     var grandtotal = eval("@Model.Sum(x => x.TheoryMark)+@Model.Sum(x => x.InternalMark)+@Model.Sum(x => x.PracticalMark)");
+                                    document.write(grandtotal);
+                                    </script>
+                                </span>
+
+                            </td>
+
+                            <td>
+                                <script>
+                                var creditsno =@MarkCounter-1;
+
+                                document.write(creditsno * 3);
+                                </script>
+                                Cr.
+
+                            </td>
+                        <tr>
+                            <td colspan="7">
+                                <strong>
+                                    Division:&nbsp;<span>
+                                        <script type="text/javascript">
+                                var per =@MarkCounter-1;
+                                 var grandtotal = eval("@Model.Sum(x => x.TheoryMark)+@Model.Sum(x => x.InternalMark)+@Model.Sum(x => x.PracticalMark)");
+                        var percentage = eval("grandtotal/per");
+                            if (percentage < 50)
+                                document.write("Failed");
+                            else if (percentage >= 50 && percentage < 60)
+                                document.write("Passed in Individual paper");
+                            else if (percentage >= 60 && percentage < 70)
+                                document.write("Second");
+                            else if (percentage >= 70 && percentage < 80)
+                                document.write("First");
+                            else if (percentage >= 80)
+                                document.write("Distinction");
+                                        </script>
+                                    </span>
+                                </strong>
+                            </td>
+                            <td colspan="8">
+                                <strong>
+                                    Percentage:&nbsp;<span>
+                                        <script type="text/javascript">
+
+                                            document.write(percentage.toFixed(2));
+
+                                        </script>
+                                    </span>
+                                </strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            }
+
+            else
+            {
+                <p style="font-weight:bold">
+                    Result Not Uploaded!!!
+                </p>
+            }
+        </div>
+</body>
+</html>

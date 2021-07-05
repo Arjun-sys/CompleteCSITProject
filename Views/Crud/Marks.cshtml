@@ -1,0 +1,74 @@
+﻿@model IEnumerable<EasyCSIT.Models.MarkModel>
+
+@{
+    ViewData["Title"] = "Marks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Marks</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TheoryMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PracticalMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InternalMark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubjectName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TheoryMark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PracticalMark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InternalMark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubjectName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit_Marks", new { markId = item.MarkId }) |
+                @Html.ActionLink("Details", "Marks_Details", new { markId = item.MarkId }) |
+                @Html.ActionLink("Delete", "Delete_Marks", new { markId = item.MarkId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

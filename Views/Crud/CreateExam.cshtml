@@ -1,0 +1,49 @@
+﻿@model EasyCSIT.Models.ExamModel
+
+@{
+    ViewData["Title"] = "CreateExam";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CreateExam</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateExam">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*   <div class="form-group">
+            <label asp-for="ExamId" class="control-label"></label>
+            <input asp-for="ExamId" class="form-control" />
+            <span asp-validation-for="ExamId" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <label asp-for="ExamName" class="control-label">
+                    </label>sp-items="new SelectList(ViewBag.ExamName)">
+                   
+
+                </select>
+                <span asp-validation-for="ExamName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+
+                <label asp-for="StudentId" class="control-label"></label>
+                @* <input asp-for="StudentId" class="form-control" /> *@
+                @Html.DropDownListFor(x => x.StudentId, ViewBag.Students as SelectList, "--Select Student--", new { @class = "form-control" })
+                <span asp-validation-for="StudentId" class="text-danger"></span>
+
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
