@@ -53,7 +53,7 @@ namespace EasyCSIT.Controllers
             using(var client=new SmtpClient())
             {
                 client.Connect("smtp.gmail.com");
-                client.Authenticate("armantiwari1123@gmail.com", "Armantiwari1123@*");
+                client.Authenticate("");
                 var bodyBuilder = new BodyBuilder
                 {
                     HtmlBody=$"<p><b>Dear {student.Name}</b></p>" +
@@ -69,7 +69,7 @@ namespace EasyCSIT.Controllers
                     Body=bodyBuilder.ToMessageBody()
 
                 };
-                message.From.Add(new MailboxAddress("EasyCSIT.com", "armantiwari1123@gmail.com"));
+                message.From.Add(new MailboxAddress("", ""));
                 message.To.Add(new MailboxAddress(student.Email));
                 message.Subject = "Data Submitted Successfuly!!";
                 client.Send(message);
